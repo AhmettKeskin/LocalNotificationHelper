@@ -1,10 +1,14 @@
-//
-//  LocalNotificationHelper.swift
-//  LocalNotificationHelper
-//
-//  Created by Ahmet Keskin on 17/10/15.
-//  Copyright © 2015 Ahmet Keskin. All rights reserved.
-//
+/*
+The MIT License (MIT)
+
+Copyright (c) 2015 AhmetKeskin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
 
 import Foundation
 
@@ -21,20 +25,19 @@ class LocalNotificationHelper: NSObject {
         return Static.instance
     }
     
-    func createNotification(key key : String,title : String, message : String, seconds : Double){
+    func postNotification(key key : String,title : String, message : String, seconds : Double){
         
-        // create a corresponding local notification
         let notification = UILocalNotification()
-        notification.alertAction = title // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
-        notification.alertBody = message // text that will be displayed in the notification
+        notification.alertAction = title
+        notification.alertBody = message
         notification.userInfo = [
             "key": key,
             "title" : title,
             "message" : message,
         ]
-        notification.soundName = UILocalNotificationDefaultSoundName // play default sound
+        notification.soundName = UILocalNotificationDefaultSoundName
         let fireDate = NSDate(timeIntervalSinceNow: seconds)
-        notification.fireDate = fireDate // todo item due date (when notification will be fired)
+        notification.fireDate = fireDate
         notification.hasAction = true
         notification.category = LOCAL_NOTIFICATION_CATEGORY
         
@@ -42,58 +45,55 @@ class LocalNotificationHelper: NSObject {
         
     }
     
-    func createNotification(key key : String,title : String, message : String, date : NSDate){
+    func postNotification(key key : String,title : String, message : String, date : NSDate){
         
-        // create a corresponding local notification
         let notification = UILocalNotification()
-        notification.alertAction = title // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
-        notification.alertBody = message // text that will be displayed in the notification
+        notification.alertAction = title
+        notification.alertBody = message
         notification.userInfo = [
             "key": key,
             "title" : title,
             "message" : message,
         ]
-        notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-        notification.fireDate = date // todo item due date (when notification will be fired)
+        notification.soundName = UILocalNotificationDefaultSoundName
+        notification.fireDate = date
         notification.hasAction = true
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
     }
     
-    func createNotification(key key : String,title : String, message : String, seconds : Double, soundName : String){
+    func postNotification(key key : String,title : String, message : String, seconds : Double, soundName : String){
         
-        // create a corresponding local notification
         let notification = UILocalNotification()
-        notification.alertAction = title // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
-        notification.alertBody = message // text that will be displayed in the notification
+        notification.alertAction = title
+        notification.alertBody = message
         notification.userInfo = [
             "key": key,
             "title" : title,
             "message" : message,
         ]
-        notification.soundName = soundName // play default sound
+        notification.soundName = soundName
         let fireDate = NSDate(timeIntervalSinceNow: seconds)
-        notification.fireDate = fireDate // todo item due date (when notification will be fired)
+        notification.fireDate = fireDate
         notification.hasAction = true
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
     }
     
-    func createNotification(key key : String,title : String, message : String, date : NSDate, soundName : String){
+    func postNotification(key key : String,title : String, message : String, date : NSDate, soundName : String){
         
-        // create a corresponding local notification
         let notification = UILocalNotification()
-        notification.alertAction = title // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
-        notification.alertBody = message // text that will be displayed in the notification
+        notification.alertAction = title
+        notification.alertBody = message
         notification.userInfo = [
             "key": key,
             "title" : title,
             "message" : message,
         ]
-        notification.soundName = soundName // play default sound
-        notification.fireDate = date // todo item due date (when notification will be fired)
+        notification.soundName = soundName
+        notification.fireDate = date
         notification.hasAction = true
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
