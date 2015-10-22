@@ -73,7 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSNotificationCenter.defaultCenter().postNotificationName(ACTION_TWO_IDENTIFIER, object: nil)
         }
         
-        
         completionHandler()
     }
 

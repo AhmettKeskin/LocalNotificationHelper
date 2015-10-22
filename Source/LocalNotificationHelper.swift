@@ -126,6 +126,10 @@ class LocalNotificationHelper: NSObject {
         
     }
     
+    func cancelAllNotifications(){
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+    }
+    
     func registerUserNotificationWithActionButtons(actions actions : [UIUserNotificationAction]){
         
         let category = UIMutableUserNotificationCategory()

@@ -30,7 +30,9 @@ class ViewController: UIViewController {
     @IBAction func sendNotificationTapped(sender: AnyObject) {
         
         LocalNotificationHelper.sharedInstance.postNotification(key: "mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5)
+        
     }
+    
     
     func likeActionButtonTapped(notification : NSNotification){
         self.imageView.image = UIImage(named: "icon_like")
