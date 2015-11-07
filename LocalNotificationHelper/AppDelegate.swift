@@ -20,12 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
-        let actionOne = LocalNotificationHelper.sharedInstance.createUserNotificationActionButton(identifier: ACTION_ONE_IDENTIFIER, title: "Like")
-        let actionTwo = LocalNotificationHelper.sharedInstance.createUserNotificationActionButton(identifier: ACTION_TWO_IDENTIFIER, title: "Dislike")
+        let actionOne = LocalNotificationHelper.sharedInstance().createUserNotificationActionButton(identifier: ACTION_ONE_IDENTIFIER, title: "Like")
+        let actionTwo = LocalNotificationHelper.sharedInstance().createUserNotificationActionButton(identifier: ACTION_TWO_IDENTIFIER, title: "Dislike")
         
         let actions = [actionOne,actionTwo]
         
-        LocalNotificationHelper.sharedInstance.registerUserNotificationWithActionButtons(actions: actions)
+        LocalNotificationHelper.sharedInstance().registerUserNotificationWithActionButtons(actions: actions)
         
         return true
     }
