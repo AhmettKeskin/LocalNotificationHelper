@@ -18,86 +18,59 @@ class LocalNotificationHelper: NSObject {
     
     let LOCAL_NOTIFICATION_CATEGORY : String = "LocalNotificationCategory"
     
-    class var sharedInstance : LocalNotificationHelper {
-        struct Static {
-            static let instance : LocalNotificationHelper = LocalNotificationHelper()
+    // MARK: - Shared Instance
+    
+    class func sharedInstance() -> LocalNotificationHelper {
+        struct Singleton {
+            static var sharedInstance = LocalNotificationHelper()
         }
-        return Static.instance
+        return Singleton.sharedInstance
     }
     
-    func postNotification(key key : String,title : String, message : String, seconds : Double){
-        
-        let notification = UILocalNotification()
-        notification.alertAction = title
-        notification.alertBody = message
-        notification.userInfo = [
-            "key": key,
-            "title" : title,
-            "message" : message,
-        ]
-        notification.soundName = UILocalNotificationDefaultSoundName
-        let fireDate = NSDate(timeIntervalSinceNow: seconds)
-        notification.fireDate = fireDate
-        notification.hasAction = true
+    // MARK: - Schedule Notification
+    
+    func scheduleNotificationWithKey(key: String, title: String, message: String, seconds: Double) {
+        let date = NSDate(timeIntervalSinceNow: NSTimeInterval(seconds))
+        let notification = notificationWithTitle(title, message: message, date: date, userInfo: ["key": key], soundName: nil, hasAction: true)
         notification.category = LOCAL_NOTIFICATION_CATEGORY
-        
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        
     }
     
-    func postNotification(key key : String,title : String, message : String, date : NSDate){
-        
+    func scheduleNotificationWithKey(key: String, title: String, message: String, date: NSDate){
+        let notification = notificationWithTitle(title, message: message, date: date, userInfo: ["key": key], soundName: nil, hasAction: true)
+        notification.category = LOCAL_NOTIFICATION_CATEGORY
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
+    
+    func scheduleNotificationWithKey(key: String, title: String, message: String, seconds: Double, soundName: String){
+        let date = NSDate(timeIntervalSinceNow: NSTimeInterval(seconds))
+        let notification = notificationWithTitle(title, message: message, date: date, userInfo: ["key": key], soundName: soundName, hasAction: true)
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
+    
+    func scheduleNotificationWithKey(key: String, title: String, message: String, date: NSDate, soundName: String){
+        let notification = notificationWithTitle(title, message: message, date: date, userInfo: ["key": key], soundName: soundName, hasAction: true)
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
+    
+    // MARK: - Present Notification
+    
+    func presentNotificationWithKey(key: String, title: String, message: String, soundName: String) {
+        let notification = notificationWithTitle(title, message: message, date: nil, userInfo: ["key": key], soundName: nil, hasAction: true)
+        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+    }
+    
+    // MARK: - Create Notification
+    
+    func notificationWithTitle(title: String, message: String, date: NSDate?, userInfo: [NSObject: AnyObject]?, soundName: String?, hasAction: Bool) -> UILocalNotification {
         let notification = UILocalNotification()
         notification.alertAction = title
         notification.alertBody = message
-        notification.userInfo = [
-            "key": key,
-            "title" : title,
-            "message" : message,
-        ]
-        notification.soundName = UILocalNotificationDefaultSoundName
+        notification.userInfo = userInfo
+        notification.soundName = soundName ?? UILocalNotificationDefaultSoundName
         notification.fireDate = date
-        notification.hasAction = true
-        
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        
-    }
-    
-    func postNotification(key key : String,title : String, message : String, seconds : Double, soundName : String){
-        
-        let notification = UILocalNotification()
-        notification.alertAction = title
-        notification.alertBody = message
-        notification.userInfo = [
-            "key": key,
-            "title" : title,
-            "message" : message,
-        ]
-        notification.soundName = soundName
-        let fireDate = NSDate(timeIntervalSinceNow: seconds)
-        notification.fireDate = fireDate
-        notification.hasAction = true
-        
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        
-    }
-    
-    func postNotification(key key : String,title : String, message : String, date : NSDate, soundName : String){
-        
-        let notification = UILocalNotification()
-        notification.alertAction = title
-        notification.alertBody = message
-        notification.userInfo = [
-            "key": key,
-            "title" : title,
-            "message" : message,
-        ]
-        notification.soundName = soundName
-        notification.fireDate = date
-        notification.hasAction = true
-        
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        
+        notification.hasAction = hasAction
+        return notification
     }
     
     func getNotificationWithKey(key : String) -> UILocalNotification {
@@ -120,13 +93,11 @@ class LocalNotificationHelper: NSObject {
         }
     }
     
-    func getAllNotifications() -> [UILocalNotification] {
-        
-        return UIApplication.sharedApplication().scheduledLocalNotifications!
-        
+    func getAllNotifications() -> [UILocalNotification]? {
+        return UIApplication.sharedApplication().scheduledLocalNotifications
     }
     
-    func cancelAllNotifications(){
+    func cancelAllNotifications() {
         UIApplication.sharedApplication().cancelAllLocalNotifications()
     }
     
@@ -135,8 +106,7 @@ class LocalNotificationHelper: NSObject {
         let category = UIMutableUserNotificationCategory()
         category.identifier = LOCAL_NOTIFICATION_CATEGORY
         
-        category.setActions(actions,
-            forContext: UIUserNotificationActionContext.Default)
+        category.setActions(actions, forContext: UIUserNotificationActionContext.Default)
         
         let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: NSSet(object: category) as? Set<UIUserNotificationCategory>)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)

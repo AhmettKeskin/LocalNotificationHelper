@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 
     @IBAction func sendNotificationTapped(sender: AnyObject) {
         
-        LocalNotificationHelper.sharedInstance.postNotification(key: "mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5)
+        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey("mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5)
         
     }
     
