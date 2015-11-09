@@ -22,13 +22,13 @@ pod 'LocalNotificationHelper'
 ``` swift
   
   // Create and post local notifications
-  LocalNotificationHelper.sharedInstance.postNotification(key: "mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5)
+  LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey("mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5)
   
   /*
-  LocalNotificationHelper.sharedInstance.postNotification(key: <#T##String#>, title: <#T##String#>, message: <#T##String#>, date: <#T##NSDate#>)
-  LocalNotificationHelper.sharedInstance.postNotification(key: <#T##String#>, title: <#T##String#>, message: <#T##String#>, date: <#T##NSDate#>, soundName: <#T##String#>)
-  LocalNotificationHelper.sharedInstance.postNotification(key: <#T##String#>, title: <#T##String#>, message: <#T##String#>, seconds: <#T##Double#>)
-  LocalNotificationHelper.sharedInstance.postNotification(key: <#T##String#>, title: <#T##String#>, message: <#T##String#>, seconds: <#T##Double#>, soundName: <#T##String#>)
+  LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(<#T##key: String##String#>, title: <#T##String#>, message: <#T##String#>, date: <#T##NSDate#>)
+        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(<#T##key: String##String#>, title: <#T##String#>, message: <#T##String#>, date: <#T##NSDate#>, soundName: <#T##String#>)
+        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(<#T##key: String##String#>, title: <#T##String#>, message: <#T##String#>, seconds: <#T##Double#>)
+        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(<#T##key: String##String#>, title: <#T##String#>, message: <#T##String#>, seconds: <#T##Double#>, soundName: <#T##String#>)
 */
 
 
@@ -37,12 +37,12 @@ pod 'LocalNotificationHelper'
 ``` swift
   // Create action buttons and register notification
   
-  let actionOne = LocalNotificationHelper.sharedInstance.createUserNotificationActionButton(identifier: ACTION_ONE_IDENTIFIER, title: "Like")
-  let actionTwo = LocalNotificationHelper.sharedInstance.createUserNotificationActionButton(identifier: ACTION_TWO_IDENTIFIER, title: "Dislike")
+  let actionOne = LocalNotificationHelper.sharedInstance().createUserNotificationActionButton(identifier: ACTION_ONE_IDENTIFIER, title: "Like")
+        let actionTwo = LocalNotificationHelper.sharedInstance().createUserNotificationActionButton(identifier: ACTION_TWO_IDENTIFIER, title: "Dislike")
         
   let actions = [actionOne,actionTwo]
         
-  LocalNotificationHelper.sharedInstance.registerUserNotificationWithActionButtons(actions: actions)
+  LocalNotificationHelper.sharedInstance().registerUserNotificationWithActionButtons(actions: actions)
 
 ```
 
