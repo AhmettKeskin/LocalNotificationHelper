@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "dislikeActionButtonTapped:", name: ACTION_TWO_IDENTIFIER, object: nil)
         
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,10 +28,10 @@ class ViewController: UIViewController {
 
     @IBAction func sendNotificationTapped(sender: AnyObject) {
         
-        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey("mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5)
+        let userInfo = ["url" : "www.mobiwise.co"]
+        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey("mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5, userInfo: userInfo)
         
     }
-    
     
     func likeActionButtonTapped(notification : NSNotification){
         self.imageView.image = UIImage(named: "icon_like")

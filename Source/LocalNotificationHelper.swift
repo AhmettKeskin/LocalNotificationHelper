@@ -35,26 +35,26 @@ class LocalNotificationHelper: NSObject {
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
-    func scheduleNotificationWithKey(key: String, title: String, message: String, date: NSDate){
+    func scheduleNotificationWithKey(key: String, title: String, message: String, date: NSDate, userInfo: [NSObject: AnyObject]?){
         let notification = notificationWithTitle(key, title: title, message: message, date: date, userInfo: ["key": key], soundName: nil, hasAction: true)
         notification.category = LOCAL_NOTIFICATION_CATEGORY
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
-    func scheduleNotificationWithKey(key: String, title: String, message: String, seconds: Double, soundName: String){
+    func scheduleNotificationWithKey(key: String, title: String, message: String, seconds: Double, soundName: String, userInfo: [NSObject: AnyObject]?){
         let date = NSDate(timeIntervalSinceNow: NSTimeInterval(seconds))
         let notification = notificationWithTitle(key, title: title, message: message, date: date, userInfo: ["key": key], soundName: soundName, hasAction: true)
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
-    func scheduleNotificationWithKey(key: String, title: String, message: String, date: NSDate, soundName: String){
+    func scheduleNotificationWithKey(key: String, title: String, message: String, date: NSDate, soundName: String, userInfo: [NSObject: AnyObject]?){
         let notification = notificationWithTitle(key, title: title, message: message, date: date, userInfo: ["key": key], soundName: soundName, hasAction: true)
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
     // MARK: - Present Notification
     
-    func presentNotificationWithKey(key: String, title: String, message: String, soundName: String) {
+    func presentNotificationWithKey(key: String, title: String, message: String, soundName: String, userInfo: [NSObject: AnyObject]?) {
         let notification = notificationWithTitle(key, title: title, message: message, date: nil, userInfo: ["key": key], soundName: nil, hasAction: true)
         UIApplication.sharedApplication().presentLocalNotificationNow(notification)
     }
