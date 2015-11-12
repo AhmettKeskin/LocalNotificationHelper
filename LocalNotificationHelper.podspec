@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'LocalNotificationHelper'
-  s.version      = '1.1'
+  s.version      = '1.1.1'
   s.license      = { :type => 'MIT' }
   s.homepage     = 'https://github.com/AhmettKeskin/LocalNotificationHelper'
   s.authors      = { 'Ahmet Keskin' => 'supreme43tr@gmail.com' }
