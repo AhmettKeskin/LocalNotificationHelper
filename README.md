@@ -9,7 +9,7 @@ LocalNotificationHelper is a swift class which helps you create - post local not
 ## Installation
   [Download](https://github.com/AhmettKeskin/LocalNotificationHelper/archive/master.zip) the project and copy the Source folder into your project and then simply you can use it in any file
 
-#### Cocoapods
+#### CocoaPods
 
 ```swift
 platform :ios, '8.0'
