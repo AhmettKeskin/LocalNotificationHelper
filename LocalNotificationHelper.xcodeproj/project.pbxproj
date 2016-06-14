@@ -12,61 +12,22 @@
 		59A39E891BD2CF2F00157004 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A39E871BD2CF2F00157004 /* Main.storyboard */; };
 		59A39E8B1BD2CF2F00157004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A39E8A1BD2CF2F00157004 /* Assets.xcassets */; };
 		59A39E8E1BD2CF2F00157004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A39E8C1BD2CF2F00157004 /* LaunchScreen.storyboard */; };
-		59A39E991BD2CF2F00157004 /* LocalNotificationHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A39E981BD2CF2F00157004 /* LocalNotificationHelperTests.swift */; };
-		59A39EA41BD2CF2F00157004 /* LocalNotificationHelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A39EA31BD2CF2F00157004 /* LocalNotificationHelperUITests.swift */; };
 		59A39EB31BD2CFA600157004 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A39EB21BD2CFA600157004 /* LocalNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		59A39E951BD2CF2F00157004 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 59A39E781BD2CF2E00157004 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 59A39E7F1BD2CF2F00157004;
-			remoteInfo = LocalNotificationHelper;
-		};
-		59A39EA01BD2CF2F00157004 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 59A39E781BD2CF2E00157004 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 59A39E7F1BD2CF2F00157004;
-			remoteInfo = LocalNotificationHelper;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		59A39E801BD2CF2F00157004 /* LocalNotificationHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNotificationHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A39E801BD2CF2F00157004 /* LocalNotificationHelperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNotificationHelperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A39E831BD2CF2F00157004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59A39E851BD2CF2F00157004 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		59A39E881BD2CF2F00157004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59A39E8A1BD2CF2F00157004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59A39E8D1BD2CF2F00157004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59A39E8F1BD2CF2F00157004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59A39E941BD2CF2F00157004 /* LocalNotificationHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalNotificationHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		59A39E981BD2CF2F00157004 /* LocalNotificationHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelperTests.swift; sourceTree = "<group>"; };
-		59A39E9A1BD2CF2F00157004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59A39E9F1BD2CF2F00157004 /* LocalNotificationHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalNotificationHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		59A39EA31BD2CF2F00157004 /* LocalNotificationHelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelperUITests.swift; sourceTree = "<group>"; };
-		59A39EA51BD2CF2F00157004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59A39EB21BD2CFA600157004 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		59A39E7D1BD2CF2F00157004 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59A39E911BD2CF2F00157004 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59A39E9C1BD2CF2F00157004 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,8 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				59A39E821BD2CF2F00157004 /* LocalNotificationHelper */,
-				59A39E971BD2CF2F00157004 /* LocalNotificationHelperTests */,
-				59A39EA21BD2CF2F00157004 /* LocalNotificationHelperUITests */,
 				59A39E811BD2CF2F00157004 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,9 +48,7 @@
 		59A39E811BD2CF2F00157004 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				59A39E801BD2CF2F00157004 /* LocalNotificationHelper.app */,
-				59A39E941BD2CF2F00157004 /* LocalNotificationHelperTests.xctest */,
-				59A39E9F1BD2CF2F00157004 /* LocalNotificationHelperUITests.xctest */,
+				59A39E801BD2CF2F00157004 /* LocalNotificationHelperDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,24 +67,6 @@
 			path = LocalNotificationHelper;
 			sourceTree = "<group>";
 		};
-		59A39E971BD2CF2F00157004 /* LocalNotificationHelperTests */ = {
-			isa = PBXGroup;
-			children = (
-				59A39E981BD2CF2F00157004 /* LocalNotificationHelperTests.swift */,
-				59A39E9A1BD2CF2F00157004 /* Info.plist */,
-			);
-			path = LocalNotificationHelperTests;
-			sourceTree = "<group>";
-		};
-		59A39EA21BD2CF2F00157004 /* LocalNotificationHelperUITests */ = {
-			isa = PBXGroup;
-			children = (
-				59A39EA31BD2CF2F00157004 /* LocalNotificationHelperUITests.swift */,
-				59A39EA51BD2CF2F00157004 /* Info.plist */,
-			);
-			path = LocalNotificationHelperUITests;
-			sourceTree = "<group>";
-		};
 		59A39EB11BD2CF6000157004 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		59A39E7F1BD2CF2F00157004 /* LocalNotificationHelper */ = {
+		59A39E7F1BD2CF2F00157004 /* LocalNotificationHelperDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 59A39EA81BD2CF2F00157004 /* Build configuration list for PBXNativeTarget "LocalNotificationHelper" */;
+			buildConfigurationList = 59A39EA81BD2CF2F00157004 /* Build configuration list for PBXNativeTarget "LocalNotificationHelperDemo" */;
 			buildPhases = (
 				59A39E7C1BD2CF2F00157004 /* Sources */,
 				59A39E7D1BD2CF2F00157004 /* Frameworks */,
@@ -152,46 +91,10 @@
 			);
 			dependencies = (
 			);
-			name = LocalNotificationHelper;
+			name = LocalNotificationHelperDemo;
 			productName = LocalNotificationHelper;
-			productReference = 59A39E801BD2CF2F00157004 /* LocalNotificationHelper.app */;
+			productReference = 59A39E801BD2CF2F00157004 /* LocalNotificationHelperDemo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		59A39E931BD2CF2F00157004 /* LocalNotificationHelperTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 59A39EAB1BD2CF2F00157004 /* Build configuration list for PBXNativeTarget "LocalNotificationHelperTests" */;
-			buildPhases = (
-				59A39E901BD2CF2F00157004 /* Sources */,
-				59A39E911BD2CF2F00157004 /* Frameworks */,
-				59A39E921BD2CF2F00157004 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				59A39E961BD2CF2F00157004 /* PBXTargetDependency */,
-			);
-			name = LocalNotificationHelperTests;
-			productName = LocalNotificationHelperTests;
-			productReference = 59A39E941BD2CF2F00157004 /* LocalNotificationHelperTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		59A39E9E1BD2CF2F00157004 /* LocalNotificationHelperUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 59A39EAE1BD2CF2F00157004 /* Build configuration list for PBXNativeTarget "LocalNotificationHelperUITests" */;
-			buildPhases = (
-				59A39E9B1BD2CF2F00157004 /* Sources */,
-				59A39E9C1BD2CF2F00157004 /* Frameworks */,
-				59A39E9D1BD2CF2F00157004 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				59A39EA11BD2CF2F00157004 /* PBXTargetDependency */,
-			);
-			name = LocalNotificationHelperUITests;
-			productName = LocalNotificationHelperUITests;
-			productReference = 59A39E9F1BD2CF2F00157004 /* LocalNotificationHelperUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -234,9 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				59A39E7F1BD2CF2F00157004 /* LocalNotificationHelper */,
-				59A39E931BD2CF2F00157004 /* LocalNotificationHelperTests */,
-				59A39E9E1BD2CF2F00157004 /* LocalNotificationHelperUITests */,
+				59A39E7F1BD2CF2F00157004 /* LocalNotificationHelperDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -249,20 +150,6 @@
 				59A39E8E1BD2CF2F00157004 /* LaunchScreen.storyboard in Resources */,
 				59A39E8B1BD2CF2F00157004 /* Assets.xcassets in Resources */,
 				59A39E891BD2CF2F00157004 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59A39E921BD2CF2F00157004 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59A39E9D1BD2CF2F00157004 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,36 +166,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59A39E901BD2CF2F00157004 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				59A39E991BD2CF2F00157004 /* LocalNotificationHelperTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59A39E9B1BD2CF2F00157004 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				59A39EA41BD2CF2F00157004 /* LocalNotificationHelperUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		59A39E961BD2CF2F00157004 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 59A39E7F1BD2CF2F00157004 /* LocalNotificationHelper */;
-			targetProxy = 59A39E951BD2CF2F00157004 /* PBXContainerItemProxy */;
-		};
-		59A39EA11BD2CF2F00157004 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 59A39E7F1BD2CF2F00157004 /* LocalNotificationHelper */;
-			targetProxy = 59A39EA01BD2CF2F00157004 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		59A39E871BD2CF2F00157004 /* Main.storyboard */ = {
@@ -437,62 +295,6 @@
 			};
 			name = Release;
 		};
-		59A39EAC1BD2CF2F00157004 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 89QENA8827;
-				INFOPLIST_FILE = LocalNotificationHelperTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.mobiwise.LocalNotificationHelperTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalNotificationHelper.app/LocalNotificationHelper";
-			};
-			name = Debug;
-		};
-		59A39EAD1BD2CF2F00157004 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 89QENA8827;
-				INFOPLIST_FILE = LocalNotificationHelperTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.mobiwise.LocalNotificationHelperTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalNotificationHelper.app/LocalNotificationHelper";
-			};
-			name = Release;
-		};
-		59A39EAF1BD2CF2F00157004 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 89QENA8827;
-				INFOPLIST_FILE = LocalNotificationHelperUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.mobiwise.LocalNotificationHelperUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = LocalNotificationHelper;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		59A39EB01BD2CF2F00157004 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 89QENA8827;
-				INFOPLIST_FILE = LocalNotificationHelperUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.mobiwise.LocalNotificationHelperUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = LocalNotificationHelper;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -505,29 +307,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59A39EA81BD2CF2F00157004 /* Build configuration list for PBXNativeTarget "LocalNotificationHelper" */ = {
+		59A39EA81BD2CF2F00157004 /* Build configuration list for PBXNativeTarget "LocalNotificationHelperDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				59A39EA91BD2CF2F00157004 /* Debug */,
 				59A39EAA1BD2CF2F00157004 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		59A39EAB1BD2CF2F00157004 /* Build configuration list for PBXNativeTarget "LocalNotificationHelperTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				59A39EAC1BD2CF2F00157004 /* Debug */,
-				59A39EAD1BD2CF2F00157004 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		59A39EAE1BD2CF2F00157004 /* Build configuration list for PBXNativeTarget "LocalNotificationHelperUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				59A39EAF1BD2CF2F00157004 /* Debug */,
-				59A39EB01BD2CF2F00157004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
