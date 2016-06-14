@@ -15,53 +15,44 @@ import AVKit
 
 class LocalNotificationHelper: NSObject {
     
-    let LOCAL_NOTIFICATION_CATEGORY : String = "LocalNotificationCategory"
-    
-    // MARK: - Shared Instance
-    
-    class func sharedInstance() -> LocalNotificationHelper {
-        struct Singleton {
-            static var sharedInstance = LocalNotificationHelper()
-        }
-        return Singleton.sharedInstance
-    }
+    static let LOCAL_NOTIFICATION_CATEGORY : String = "LocalNotificationCategory"
     
     // MARK: - Schedule Notification
     
-    func scheduleNotificationWithKey(key: String, title: String, message: String, seconds: Double, userInfo: [NSObject: AnyObject]?) {
+    static func scheduleNotificationWithKey(key: String, title: String, message: String, seconds: Double, userInfo: [NSObject: AnyObject]?) {
         let date = NSDate(timeIntervalSinceNow: TimeInterval(seconds))
         let notification = notificationWithTitle(key: key, title: title, message: message, date: date, userInfo: userInfo, soundName: nil, hasAction: true)
         notification.category = LOCAL_NOTIFICATION_CATEGORY
         UIApplication.shared.scheduleLocalNotification(notification)
     }
     
-    func scheduleNotificationWithKey(key: String, title: String, message: String, date: NSDate, userInfo: [NSObject: AnyObject]?){
+    static func scheduleNotificationWithKey(key: String, title: String, message: String, date: NSDate, userInfo: [NSObject: AnyObject]?){
         let notification = notificationWithTitle(key: key, title: title, message: message, date: date, userInfo: ["key" as NSObject: key as AnyObject], soundName: nil, hasAction: true)
         notification.category = LOCAL_NOTIFICATION_CATEGORY
         UIApplication.shared.scheduleLocalNotification(notification)
     }
     
-    func scheduleNotificationWithKey(key: String, title: String, message: String, seconds: Double, soundName: String, userInfo: [NSObject: AnyObject]?){
+    static  func scheduleNotificationWithKey(key: String, title: String, message: String, seconds: Double, soundName: String, userInfo: [NSObject: AnyObject]?){
         let date = NSDate(timeIntervalSinceNow: TimeInterval(seconds))
         let notification = notificationWithTitle(key: key, title: title, message: message, date: date, userInfo: ["key" as NSObject: key as AnyObject], soundName: soundName, hasAction: true)
         UIApplication.shared.scheduleLocalNotification(notification)
     }
     
-    func scheduleNotificationWithKey(key: String, title: String, message: String, date: NSDate, soundName: String, userInfo: [NSObject: AnyObject]?){
+    static func scheduleNotificationWithKey(key: String, title: String, message: String, date: NSDate, soundName: String, userInfo: [NSObject: AnyObject]?){
         let notification = notificationWithTitle(key: key, title: title, message: message, date: date, userInfo: ["key" as NSObject: key as AnyObject], soundName: soundName, hasAction: true)
         UIApplication.shared.scheduleLocalNotification(notification)
     }
     
     // MARK: - Present Notification
     
-    func presentNotificationWithKey(key: String, title: String, message: String, soundName: String, userInfo: [NSObject: AnyObject]?) {
+    static func presentNotificationWithKey(key: String, title: String, message: String, soundName: String, userInfo: [NSObject: AnyObject]?) {
         let notification = notificationWithTitle(key: key, title: title, message: message, date: nil, userInfo: ["key" as NSObject: key as AnyObject], soundName: nil, hasAction: true)
         UIApplication.shared.presentLocalNotificationNow(notification)
     }
     
     // MARK: - Create Notification
     
-    func notificationWithTitle(key : String, title: String, message: String, date: NSDate?, userInfo: [NSObject: AnyObject]?, soundName: String?, hasAction: Bool) -> UILocalNotification {
+    static func notificationWithTitle(key : String, title: String, message: String, date: NSDate?, userInfo: [NSObject: AnyObject]?, soundName: String?, hasAction: Bool) -> UILocalNotification {
         
         var dct : Dictionary<String,AnyObject>!
         
@@ -84,7 +75,7 @@ class LocalNotificationHelper: NSObject {
         return notification
     }
     
-    func getNotificationWithKey(key : String) -> UILocalNotification {
+    static func getNotificationWithKey(key : String) -> UILocalNotification {
         
         var notif : UILocalNotification?
         
@@ -96,7 +87,7 @@ class LocalNotificationHelper: NSObject {
         return notif!
     }
     
-    func cancelNotification(key : String){
+    static func cancelNotification(key : String){
         
         for notification in UIApplication.shared.scheduledLocalNotifications! where notification.userInfo!["key"] as! String == key{
             UIApplication.shared.cancelLocalNotification(notification)
@@ -104,16 +95,15 @@ class LocalNotificationHelper: NSObject {
         }
     }
     
-    func getAllNotifications() -> [UILocalNotification]? {
+    static func getAllNotifications() -> [UILocalNotification]? {
         return UIApplication.shared.scheduledLocalNotifications
     }
     
-    func cancelAllNotifications() {
+    static func cancelAllNotifications() {
         UIApplication.shared.cancelAllLocalNotifications()
     }
     
-    func registerUserNotificationWithActionButtons(actions : [UIUserNotificationAction]){
-        
+    static func registerUserNotificationWithActionButtons(actions : [UIUserNotificationAction]){
         let category = UIMutableUserNotificationCategory()
         category.identifier = LOCAL_NOTIFICATION_CATEGORY
         
@@ -123,14 +113,13 @@ class LocalNotificationHelper: NSObject {
         UIApplication.shared.registerUserNotificationSettings(settings)
     }
     
-    func registerUserNotification(){
+    static func registerUserNotification(){
         
         let settings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
         UIApplication.shared.registerUserNotificationSettings(settings)
     }
     
-    func createUserNotificationActionButton(identifier : String, title : String) -> UIUserNotificationAction{
-        
+    static func createUserNotificationActionButton(identifier : String, title : String) -> UIUserNotificationAction{        
         let actionButton = UIMutableUserNotificationAction()
         actionButton.identifier = identifier
         actionButton.title = title
