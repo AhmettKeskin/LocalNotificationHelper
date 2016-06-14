@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		466ECD8B1D0F904C00C828A0 /* LocalNotificationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 466ECD8A1D0F904C00C828A0 /* LocalNotificationHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		466ECD901D0F905000C828A0 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A39EB21BD2CFA600157004 /* LocalNotificationHelper.swift */; };
 		59A39E841BD2CF2F00157004 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A39E831BD2CF2F00157004 /* AppDelegate.swift */; };
 		59A39E861BD2CF2F00157004 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A39E851BD2CF2F00157004 /* ViewController.swift */; };
 		59A39E891BD2CF2F00157004 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A39E871BD2CF2F00157004 /* Main.storyboard */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		466ECD881D0F904C00C828A0 /* LocalNotificationHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocalNotificationHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		466ECD8A1D0F904C00C828A0 /* LocalNotificationHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalNotificationHelper.h; sourceTree = "<group>"; };
+		466ECD8C1D0F904C00C828A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59A39E801BD2CF2F00157004 /* LocalNotificationHelperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNotificationHelperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A39E831BD2CF2F00157004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59A39E851BD2CF2F00157004 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +32,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		466ECD841D0F904C00C828A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59A39E7D1BD2CF2F00157004 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +49,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		466ECD891D0F904C00C828A0 /* LocalNotificationHelper */ = {
+			isa = PBXGroup;
+			children = (
+				466ECD8A1D0F904C00C828A0 /* LocalNotificationHelper.h */,
+				466ECD8C1D0F904C00C828A0 /* Info.plist */,
+			);
+			path = LocalNotificationHelper;
+			sourceTree = "<group>";
+		};
 		59A39E771BD2CF2E00157004 = {
 			isa = PBXGroup;
 			children = (
 				59A39E821BD2CF2F00157004 /* LocalNotificationHelper */,
+				466ECD891D0F904C00C828A0 /* LocalNotificationHelper */,
 				59A39E811BD2CF2F00157004 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				59A39E801BD2CF2F00157004 /* LocalNotificationHelperDemo.app */,
+				466ECD881D0F904C00C828A0 /* LocalNotificationHelper.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,7 +101,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		466ECD851D0F904C00C828A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				466ECD8B1D0F904C00C828A0 /* LocalNotificationHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		466ECD871D0F904C00C828A0 /* LocalNotificationHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 466ECD8D1D0F904C00C828A0 /* Build configuration list for PBXNativeTarget "LocalNotificationHelper" */;
+			buildPhases = (
+				466ECD831D0F904C00C828A0 /* Sources */,
+				466ECD841D0F904C00C828A0 /* Frameworks */,
+				466ECD851D0F904C00C828A0 /* Headers */,
+				466ECD861D0F904C00C828A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocalNotificationHelper;
+			productName = LocalNotificationHelper;
+			productReference = 466ECD881D0F904C00C828A0 /* LocalNotificationHelper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		59A39E7F1BD2CF2F00157004 /* LocalNotificationHelperDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59A39EA81BD2CF2F00157004 /* Build configuration list for PBXNativeTarget "LocalNotificationHelperDemo" */;
@@ -105,6 +157,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ahmet Keskin";
 				TargetAttributes = {
+					466ECD871D0F904C00C828A0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					59A39E7F1BD2CF2F00157004 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 89QENA8827;
@@ -138,11 +193,19 @@
 			projectRoot = "";
 			targets = (
 				59A39E7F1BD2CF2F00157004 /* LocalNotificationHelperDemo */,
+				466ECD871D0F904C00C828A0 /* LocalNotificationHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		466ECD861D0F904C00C828A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59A39E7E1BD2CF2F00157004 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,6 +219,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		466ECD831D0F904C00C828A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				466ECD901D0F905000C828A0 /* LocalNotificationHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59A39E7C1BD2CF2F00157004 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +259,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		466ECD8E1D0F904C00C828A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LocalNotificationHelper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AhmettKeskin.LocalNotificationHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		466ECD8F1D0F904C00C828A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LocalNotificationHelper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AhmettKeskin.LocalNotificationHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		59A39EA61BD2CF2F00157004 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -298,6 +411,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		466ECD8D1D0F904C00C828A0 /* Build configuration list for PBXNativeTarget "LocalNotificationHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				466ECD8E1D0F904C00C828A0 /* Debug */,
+				466ECD8F1D0F904C00C828A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		59A39E7B1BD2CF2E00157004 /* Build configuration list for PBXProject "LocalNotificationHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
