@@ -28,9 +28,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendNotificationTapped(sender: AnyObject) {
-        
+
         let userInfo = ["url" : "www.mobiwise.co"]
-        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(key: "mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5, userInfo: userInfo as [NSObject : AnyObject]?)
+        LocalNotificationHelper.scheduleNotificationWithKey(key: "mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5, userInfo: userInfo as [NSObject : AnyObject]?)
         
     }
     
