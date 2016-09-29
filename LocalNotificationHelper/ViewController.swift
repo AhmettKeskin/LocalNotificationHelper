@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "likeActionButtonTapped:", name: ACTION_ONE_IDENTIFIER, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.likeActionButtonTapped(notification:)), name: NSNotification.Name(rawValue: ACTION_ONE_IDENTIFIER), object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "dislikeActionButtonTapped:", name: ACTION_TWO_IDENTIFIER, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.dislikeActionButtonTapped(notification:)), name: NSNotification.Name(rawValue: ACTION_TWO_IDENTIFIER), object: nil)
         
     }
 
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBAction func sendNotificationTapped(sender: AnyObject) {
         
         let userInfo = ["url" : "www.mobiwise.co"]
-        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey("mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5, userInfo: userInfo)
+        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(key: "mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5, userInfo: userInfo as [NSObject : AnyObject]?)
         
     }
     

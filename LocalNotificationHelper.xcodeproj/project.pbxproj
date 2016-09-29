@@ -14,7 +14,7 @@
 		59A39E8E1BD2CF2F00157004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A39E8C1BD2CF2F00157004 /* LaunchScreen.storyboard */; };
 		59A39E991BD2CF2F00157004 /* LocalNotificationHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A39E981BD2CF2F00157004 /* LocalNotificationHelperTests.swift */; };
 		59A39EA41BD2CF2F00157004 /* LocalNotificationHelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A39EA31BD2CF2F00157004 /* LocalNotificationHelperUITests.swift */; };
-		59A39EB31BD2CFA600157004 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A39EB21BD2CFA600157004 /* LocalNotificationHelper.swift */; settings = {ASSET_TAGS = (); }; };
+		59A39EB31BD2CFA600157004 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A39EB21BD2CFA600157004 /* LocalNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,13 +204,19 @@
 				TargetAttributes = {
 					59A39E7F1BD2CF2F00157004 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 89QENA8827;
+						LastSwiftMigration = 0800;
 					};
 					59A39E931BD2CF2F00157004 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 89QENA8827;
+						LastSwiftMigration = 0800;
 						TestTargetID = 59A39E7F1BD2CF2F00157004;
 					};
 					59A39E9E1BD2CF2F00157004 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 89QENA8827;
+						LastSwiftMigration = 0800;
 						TestTargetID = 59A39E7F1BD2CF2F00157004;
 					};
 				};
@@ -411,10 +417,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 89QENA8827;
 				INFOPLIST_FILE = LocalNotificationHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.mobiwise.LocalNotificationHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -422,10 +430,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 89QENA8827;
 				INFOPLIST_FILE = LocalNotificationHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.mobiwise.LocalNotificationHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -433,10 +443,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 89QENA8827;
 				INFOPLIST_FILE = LocalNotificationHelperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.mobiwise.LocalNotificationHelperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalNotificationHelper.app/LocalNotificationHelper";
 			};
 			name = Debug;
@@ -445,10 +457,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 89QENA8827;
 				INFOPLIST_FILE = LocalNotificationHelperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.mobiwise.LocalNotificationHelperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalNotificationHelper.app/LocalNotificationHelper";
 			};
 			name = Release;
@@ -456,10 +470,12 @@
 		59A39EAF1BD2CF2F00157004 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 89QENA8827;
 				INFOPLIST_FILE = LocalNotificationHelperUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.mobiwise.LocalNotificationHelperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LocalNotificationHelper;
 				USES_XCTRUNNER = YES;
 			};
@@ -468,10 +484,12 @@
 		59A39EB01BD2CF2F00157004 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 89QENA8827;
 				INFOPLIST_FILE = LocalNotificationHelperUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.mobiwise.LocalNotificationHelperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LocalNotificationHelper;
 				USES_XCTRUNNER = YES;
 			};
@@ -496,6 +514,7 @@
 				59A39EAA1BD2CF2F00157004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59A39EAB1BD2CF2F00157004 /* Build configuration list for PBXNativeTarget "LocalNotificationHelperTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +523,7 @@
 				59A39EAD1BD2CF2F00157004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59A39EAE1BD2CF2F00157004 /* Build configuration list for PBXNativeTarget "LocalNotificationHelperUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +532,7 @@
 				59A39EB01BD2CF2F00157004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

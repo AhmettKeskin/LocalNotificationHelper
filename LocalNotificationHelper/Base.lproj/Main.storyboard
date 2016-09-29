@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CCS-a7-Jmw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CCS-a7-Jmw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,20 +15,16 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aC0-6I-Waf">
-                                <rect key="frame" x="241" y="72" width="119" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Send Notification"/>
                                 <connections>
-                                    <action selector="sendNotificationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mF-0v-8qK"/>
+                                    <action selector="sendNotificationTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VJu-vh-vbD"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eh0-sG-FEi">
-                                <rect key="frame" x="220" y="220" width="160" height="160"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="QfI-6B-HoB"/>
                                     <constraint firstAttribute="width" constant="160" id="nrX-Jv-pK1"/>
@@ -40,8 +37,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eh0-sG-FEi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Gm-ZA-iFT"/>
                             <constraint firstItem="aC0-6I-Waf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8mV-w0-CWc"/>
@@ -72,7 +68,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="56K-tV-ML3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
