@@ -16,6 +16,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 pod 'LocalNotificationHelper'
+swift 3 | xCode 8
 ```
 ## Usage
 
@@ -25,10 +26,10 @@ pod 'LocalNotificationHelper'
   LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey("mobiwise", title: "mobiwise", message: "Lets take a break", seconds: 5)
   
   /*
-  LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(<#T##key: String##String#>, title: <#T##String#>, message: <#T##String#>, date: <#T##NSDate#>)
-        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(<#T##key: String##String#>, title: <#T##String#>, message: <#T##String#>, date: <#T##NSDate#>, soundName: <#T##String#>)
-        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(<#T##key: String##String#>, title: <#T##String#>, message: <#T##String#>, seconds: <#T##Double#>)
-        LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(<#T##key: String##String#>, title: <#T##String#>, message: <#T##String#>, seconds: <#T##Double#>, soundName: <#T##String#>)
+  LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(key: <#T##String#>, title: <#T##String#>, message: <#T##String#>, seconds: <#T##Double#>, userInfo: <#T##[NSObject : AnyObject]?#>)
+  LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(key: <#T##String#>, title: <#T##String#>, message: <#T##String#>, date: <#T##NSDate#>, userInfo: <#T##[NSObject : AnyObject]?#>)
+  LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(key: <#T##String#>, title: <#T##String#>, message: <#T##String#>, date: <#T##NSDate#>, soundName: <#T##String#>, userInfo: <#T##[NSObject : AnyObject]?#>)
+  LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey(key: <#T##String#>, title: <#T##String#>, message: <#T##String#>, seconds: <#T##Double#>, soundName: <#T##String#>, userInfo: <#T##[NSObject : AnyObject]?#>)
 */
 
 
@@ -49,22 +50,22 @@ pod 'LocalNotificationHelper'
 ### Handle Local notifications 
 ```swift
   // Catching notifications in appdelegate 
-  func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+  func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         print("notification - tapped")
     }
   
   // Handling action buttons and notifying where you need with notificationCenter  
-  func application(application: UIApplication, handleActionWithIdentifier identifier: String?,       forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
-        
+  func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, withResponseInfo responseInfo: [AnyHashable : Any], completionHandler: @escaping () -> Void) {
         if identifier == ACTION_ONE_IDENTIFIER {
             print("action one - tapped")
             
-            NSNotificationCenter.defaultCenter().postNotificationName(ACTION_ONE_IDENTIFIER, object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: ACTION_ONE_IDENTIFIER), object: nil)
             
         }else if identifier == ACTION_TWO_IDENTIFIER {
             print("action two - tapped")
             
-            NSNotificationCenter.defaultCenter().postNotificationName(ACTION_TWO_IDENTIFIER, object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: ACTION_TWO_IDENTIFIER), object: nil)
+            
         }
         
         completionHandler()
