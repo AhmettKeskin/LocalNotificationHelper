@@ -10,6 +10,7 @@ import UIKit
 
 let ACTION_ONE_IDENTIFIER : String = "ACTION_ONE_IDENTIFIER"
 let ACTION_TWO_IDENTIFIER : String = "ACTION_TWO_IDENTIFIER"
+let IN_APP_NOTIFICATION : String = "IN_APP_NOTIFICATION"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -58,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         
         print("notification - tapped")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: IN_APP_NOTIFICATION), object: notification, userInfo: notification.userInfo)
 
     }
     

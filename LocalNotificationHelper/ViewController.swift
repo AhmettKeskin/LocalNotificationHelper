@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.dislikeActionButtonTapped(notification:)), name: NSNotification.Name(rawValue: ACTION_TWO_IDENTIFIER), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.handleInAppNotification(notification:)), name: NSNotification.Name(rawValue: IN_APP_NOTIFICATION), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,13 +34,22 @@ class ViewController: UIViewController {
         
     }
     
-    func likeActionButtonTapped(notification : NSNotification){
+    func likeActionButtonTapped(notification : Notification){
         self.imageView.image = UIImage(named: "icon_like")
     }
     
-    func dislikeActionButtonTapped(notification : NSNotification){
+    func dislikeActionButtonTapped(notification : Notification){
         self.imageView.image = UIImage(named: "icon_dislike")
 
+    }
+    
+    func handleInAppNotification(notification : Notification){
+        if let localNotification = notification.object as? UILocalNotification {
+            let alert = UIAlertController(title:localNotification.alertTitle ?? "" , message: localNotification.alertBody ?? "", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "ok", style: .cancel)
+            alert.addAction(cancel)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
 }

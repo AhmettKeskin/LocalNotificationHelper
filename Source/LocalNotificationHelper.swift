@@ -63,11 +63,19 @@ class LocalNotificationHelper: NSObject {
     
     func notificationWithTitle(key : String, title: String, message: String, date: NSDate?, userInfo: [NSObject: AnyObject]?, soundName: String?, hasAction: Bool) -> UILocalNotification {
         
-        var dct : Dictionary<String,AnyObject> = userInfo as! Dictionary<String,AnyObject>
+        var dct : Dictionary<String,AnyObject>!
+        
+        if let unwrappedUserInfo : Dictionary<String,AnyObject> = userInfo as? Dictionary<String,AnyObject> {
+            dct = unwrappedUserInfo
+        }else {
+            dct = Dictionary<String,AnyObject>()
+        }
+        
         dct["key"] = String(stringLiteral: key) as AnyObject?
         
         let notification = UILocalNotification()
         notification.alertAction = title
+        notification.alertTitle = title
         notification.alertBody = message
         notification.userInfo = dct
         notification.soundName = soundName ?? UILocalNotificationDefaultSoundName
